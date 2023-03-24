@@ -1,0 +1,40 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++: g++.exe build active file",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-g",
+
+                // Descomentar si queremos crecimiento
+                "TumorGrowth.cpp",
+                "Libraries/GrowthLib/growthlib.cpp",
+                "Libraries/LibFEM/fem2D.cpp",
+
+                // Descomentar si queremos lisis
+                //"TumorLysis.cpp",
+                //"Libraries/LysisLib/lysislib.cpp",
+
+                //"Libraries/ToolsLib/toolslib.cpp", // esto siempre uncomment
+           
+                
+                //"${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
